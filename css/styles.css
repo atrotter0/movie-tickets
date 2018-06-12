@@ -2,10 +2,31 @@
   display: none;
 }
 
+#ticketTitle {
+  text-align: center;
+  border-bottom: 2px solid #4e4e4e;
+  margin-bottom: 20px;
+}
+
 .thumbnail {
   max-height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+label, h5{
+  color: white;
 }
 
 .well {
+  margin-top: 20px;
   width: 30%;
+}
+
+body {
+  background-image: url(../img/darkness.png);
+}
+
+.title {
+  text-align: center;
 }

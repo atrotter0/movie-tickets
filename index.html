@@ -3,15 +3,17 @@
 <head>
   <title>Movie Tickets</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link href="css/styles.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
 </head>
 <body>
   <div class="container">
-    <div class="jumbotron">
-      <h1>Movie Ticket App</h1>
+    <div class="title">
+    <img src="img/marquee.png" alt="">
     </div>
     <form id="movie-tickets">
       <div class="form-group">
@@ -25,21 +27,15 @@
         </select>
       </div>
       <div class="form-group" id="showtimesSection">
-        <label>Showtimes</label>
-        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default show-button" id="time1">Time1</button>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default show-button" id="time2">Time2</button>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default show-button" id="time3">Time3</button>
-          </div>
+        <label>Showtimes</label><br/>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary show-button" id="time1">Time1</button>
+          <button type="button" class="btn btn-secondary show-button" id="time2">Time2</button>
+          <button type="button" class="btn btn-secondary show-button" id="time3">Time3</button>
         </div>
       </div>
       <div class="form-group" id="ageSection">
-        <h2>Age</h2>
+        <h5>Age</h5>
         <div>
           <label for="child-senior">
             <input type="radio" id="child-senior" value="false" name="age">
@@ -57,15 +53,28 @@
         <label for="quantity">Quantity</label>
         <input type="text" class="form-control" id="quantity" maxLength="3">
       </div>
-      <button type="submit" class="btn btn-info btn-lg" id="submit">Buy</button>
+      <button type="submit" class="btn btn-info btn-lg" id="submit" data-toggle="modal" data-target="#ticketModal">Buy</button>
     </form>
-    <div id="ticketBox">
-      <div class="well">
-        <img class="thumbnail" src="img/" alt="">
-        <h2 id="ticketTitle"></h2>
-        <h4 id="ticketShowtime"></h4>
-        <h4 id="ticketAge"></h4>
-        <h3 id="ticketPrice"></h3>
+    <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">You're all set!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img class="thumbnail" src="" alt="">
+            <h2 id="ticketTitle"></h2>
+            <h4 id="ticketShowtime"></h4>
+            <h4 id="ticketAge"></h4>
+            <h3 id="ticketPrice"></h3>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" id="done">Done</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
