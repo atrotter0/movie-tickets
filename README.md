@@ -15,7 +15,8 @@ A simple program to allow users to select movie tickets and return ticket value.
 | Program adjusts value for Age | Age: Senior/Child | -$4 from price |
 | Program adjusts value for First Run | First Run: true  | $12 |
 | Program adjusts value for Matinee | Matinee: true  | -$2 from price |
-| Program determines price of movie ticket based on 3 factors (Age, First Run, Matinee) | Age: Senior, First Run: false, Matinee: false |  Total Price: $6 |
+| Program adjusts value for Quantity | Quantity: 2  | price x2 |
+| Program determines price of movie ticket based on 4 factors (Age, First Run, Matinee, Quantity) | Age: Senior, First Run: false, Matinee: false, Quantity: 2 |  Total Price: $12 |
 
 ## Setup/Contribution Requirements
 

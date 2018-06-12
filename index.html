@@ -9,7 +9,56 @@
   <script src="js/scripts.js"></script>
 </head>
 <body>
-  <div>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Movie Ticket App</h1>
+    </div>
+    <form id="movie-tickets">
+      <div class="form-group">
+        <label for="movies">Movies</label>
+        <select id="movies" class="form-control">
+          <option value="">Select A Movie</option>
+          <option value="rocky">Rocky Horror</option>
+          <option value="deadpool">Deadpool 2</option>
+          <option value="mermaid">Little Mermaid</option>
+          <option value="scorpion-king">The Scorpion King</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Showtimes</label>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default" id="matinee-early">Time1</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default" id="matinee-afternoon">Time2</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default" id="late-show">Time3</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <h2>Age</h2>
+        <div>
+          <label for="child-senior">
+            <input type="radio" id="child-senior" name="age">
+            Child/Senior
+          </label>
+        </div>
+        <div>
+          <label for="adult">
+            <input type="radio" id="adult" name="age">
+            Adult
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="text" class="form-control" id="quantity" maxLength="3">
+      </div>
+      <button type="submit" class="btn btn-info btn-lg" id="submit">Buy</button>
+    </form>
   </div>
 </body>
 </html>
