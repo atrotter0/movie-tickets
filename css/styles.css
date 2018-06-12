@@ -1,3 +1,11 @@
-#showtimesSection, #ageSection, #quantitySection {
+#showtimesSection, #ageSection, #quantitySection, #ticketBox {
   display: none;
+}
+
+.thumbnail {
+  max-height: 150px;
+}
+
+.well {
+  width: 30%;
 }
