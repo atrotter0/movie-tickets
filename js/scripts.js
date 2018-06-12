@@ -19,8 +19,11 @@ function clearStorage() {
 function buildMovies() {
   var objectContainer = [];
   var rockyHorror = new Movie('rockyHorror', 'Rocky Horror', ['10:00am','1:00pm','6:45pm'], false);
-  var littleMermaid = new Movie('littleMermaid', 'LittleMermaid', ['9:00am','Noon','3:00pm'], false);
-  objectContainer.push(rockyHorror, littleMermaid);
+  var deadpool = new Movie('deadpool', 'Deadpool', ['Noon','5:30pm','10:00pm'], true);
+  var littleMermaid = new Movie('littleMermaid', 'Little Mermaid', ['9:00am','Noon','3:00pm'], false);
+  var scorpionKing = new Movie('scorpionKing', 'Scorpion King', ['N/A','N/A','Midnight'], false);
+
+  objectContainer.push(rockyHorror, littleMermaid, deadpool, scorpionKing);
   loadStorage(objectContainer);
 }
 
@@ -52,6 +55,10 @@ function displayMovieData(movie) {
   $("#time3").text(movie.showtimes[2]);
 }
 
+function hideAll() {
+  $('#showtimesSection, #ageSection, #quantitySection').hide();
+}
+
 function showNext(elementId) {
   $(elementId).fadeIn(800);
 }
@@ -65,9 +72,10 @@ $(document).ready(function() {
  });
 
  $('#movieList').change(function() {
+   hideAll();
    showNext('#showtimesSection');
    var option = $(this).val();
-   loadMovieData(option);
+   option === "" ? hideAll() : loadMovieData(option);
  });
 
  $('.show-button').click(function(event) {
