@@ -27,6 +27,14 @@ body {
   background-image: url(../img/darkness.png);
 }
 
-.title {
+.title img {
+  width: 80%;
+  max-width: 690px;
+  display: block;
+  margin: 0 auto;
   text-align: center;
+}
+
+.now-showing img {
+  max-width: 100%;
 }
