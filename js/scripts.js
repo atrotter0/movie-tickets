@@ -107,6 +107,7 @@ function displayMovieData(movie) {
 
 function resetForm() {
   $('#movie-tickets')[0].reset();
+  hideAll();
 }
 
 function hideAll() {
@@ -124,7 +125,7 @@ function clearBtnClass(elementClass) {
 function displayTicket(ticket) {
   console.log(ticket);
   var age = "";
-  (ticket.age) ? age = "Adult" : age = "Child/Senior";
+  (ticket.age === "true") ? age = "Adult" : age = "Child/Senior";
 
   setImage(ticket.title);
   $("#ticketTitle").text(ticket.title);

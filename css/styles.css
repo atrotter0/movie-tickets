@@ -18,13 +18,16 @@ label, h5{
   color: white;
 }
 
-.well {
-  margin-top: 20px;
-  width: 30%;
+.modal-title {
+  color: #000;
 }
 
 body {
   background-image: url(../img/darkness.png);
+}
+
+input[type="radio"]:hover, label:hover {
+  cursor: pointer;
 }
 
 .title img {
